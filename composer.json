@@ -1,0 +1,10 @@
+{
+    "autoloas":{
+        "psr-4": {
+            ".\\": ["src"]
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

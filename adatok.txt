@@ -1,0 +1,12 @@
+CégABC;Váci út 12;élelmiszer;gyümölcsök;trópusi;mangó;3;36;389
+CégABC;Váci út 12;élelmiszer;gyümölcsök;trópusi;alma;1;25;250
+CégABC;Váci út 12;élelmiszer;gyümölcsök;trópusi;kivi;2;30;300
+CégABC;Váci út 12;élelmiszer;gyümölcsök;trópusi;ananász;3;28;280
+CégABC;Váci út 12;élelmiszer;zöldségek;gyökér;zeller;4;40;200
+CégABC;Váci út 12;élelmiszer;zöldségek;gyökér;sárgarépa;5;45;180
+CégABC;Váci út 12;élelmiszer;zöldségek;level;káposzta;6;38;220
+CégABC;Váci út 12;italok;üdítők;üdítő;kóla;7;42;120
+CégABC;Váci út 12;italok;üdítők;üdítő;narancslé;8;48;150
+CégABC;Váci út 12;italok;ásványvíz;ásványvíz;ásványvíz;9;50;100
+CégABC;Váci út 12;élelmiszer;csemegék;csokoládé;csokoládé;10;20;400
+CégABC;Váci út 12;élelmiszer;csemegék;cukorka;cukorka;11;18;350

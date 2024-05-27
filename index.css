@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.data {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.container{
+    text-align: center;
+    margin: auto;
+    border: 20px;
+}
+.kiiratas{
+    text-align: center;
+    border-color: black;
+}
+.upLoadBt{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Times New Roman';
+}
+.newData{
+    text-align: center;
+    font-weight: 100;
+}
+.mainBady{
+    text-align: center;
+    border-color: black;
+}
+.register{
+    text-align: center;
+    color: black;
+    margin: auto;
+    font-size: medium;
+    font-family: 'Times New Roman';
+}

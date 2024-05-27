@@ -1,0 +1,60 @@
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "adatbazis_nev";
+
+// Kapcsolat létrehozása
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Kapcsolat ellenőrzése
+if ($conn->connect_error) {
+    die("Sikertelen kapcsolódás: " . $conn->connect_error);
+}
+
+// CSV fájl neve
+$csvFile = "stores.csv";
+
+// Ellenőrizze, hogy a fájl létezik-e
+if (file_exists($csvFile)) {
+    // Adatok beolvasása a CSV-ből
+    $data = array_map('str_getcsv', file($csvFile));
+
+    // Adatok feltöltése a stores táblába
+    foreach ($data as $row) {
+        $name = $row[1];
+        $address = $row[2];
+        
+        // Ellenőrzi, hogy a store már létezik-e, és ha nem, hozzáadja az adatokat
+        $checkQuery = "SELECT id FROM stores WHERE name = '$name'";
+        $checkResult = $conn->query($checkQuery);
+        
+        if ($checkResult->num_rows == 0) {
+            $insertQuery = "INSERT INTO stores (name, address) VALUES ('$name', '$address')";
+            $conn->query($insertQuery);
+        }
+    }
+
+    // Adatok feltöltése a products táblába
+    foreach ($data as $row) {
+        $id_store = $row[0];
+        $name = $row[1];
+        $price = rand(10, 100); // Véletlen ár generálása (10 és 100 között)
+        $quantity = rand(1, 50); // Véletlen mennyiség generálása (1 és 50 között)
+        $min_quantity = 10;
+
+        $insertProductQuery = "INSERT INTO products (id_store, name, price, quantity, min_quantity) 
+                              VALUES ('$id_store', '$name', '$price', '$quantity', '$min_quantity')";
+        $conn->query($insertProductQuery);
+    }
+
+    echo "Az adatok sikeresen feltöltve.";
+} else {
+    echo "A CSV fájl nem található.";
+}
+
+// Kapcsolat bezárása
+$conn->close();
+
+?>
